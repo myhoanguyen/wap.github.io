@@ -1,0 +1,84 @@
+
+.firstletter {
+    float: left;
+    font-size: 3em;
+    line-height: 1;
+    font-weight: bold;
+    margin-right: 0.2em;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: initial;
+    cursor: auto;
+.hvr-:{text-decoration: underlined}
+
+}
+ol.mov {
+    display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 10px;
+    -webkit-margin-after: 10px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+    display: run-in;
+    text-align: left;
+    text-transform: uppercase;
+    text-indent: initial;
+
+}
+
+li.mov {
+    list-style-type: none;
+    display: run-in;
+    text-align: left;
+    text-transform: uppercase;
+    text-indent: initial;
+
+}
+
+ul.mood {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 10px;
+    -webkit-margin-after: 10px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+ul.friends {
+    display: block;
+    list-style-type: circle;
+    -webkit-margin-before: 10px;
+    -webkit-margin-after: 10px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+body {
+    background-image: url("image/greenbackground.jpg");
+}
+
+ul.n {
+
+
+    text-align: left;
+    list-style-type: decimal;
+}
+
+li.n {
+    display: block;
+
+    text-indent: initial;
+
+}
+
+img
+{
+    text
+}
