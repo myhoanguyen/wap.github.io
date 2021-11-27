@@ -8,45 +8,97 @@
     <link href="styleme.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-    <h1>About My Nguyen</h1>
-    <p>My name is My Nguyen. And I am <b>diligent</b>, <b>intronous</b> and quite <b>clumsy</b></p>
-    <hr/>
-    <h2>My Classes This Quarter</h2>
-    <ul>
-        <li>CS401: Modern Programming Practices (MPP)</li>
-        <li>CS435: Algorithms</li>
-        <li>CS472: Web Programming	</li>
-        <li>CS544: Enterprise Architecture</li>
-    </ul>
-    <h2>My Favorite Movies</h2>
-    <p><i><span class="firstletter">(I</span> actually don't  watch too may movies, so ...here goes!)</i></p>
-    <ol>
-        <li>Squid Game <a href = "https://www.imdb.com/title/tt10919420/?ref_=fn_al_tt_1"> (IMDB) </a></li>
-        <li>Now, we are breaking <a href = "https://www.imdb.com/title/tt14408016/?ref_=fn_al_tt_1"> (IMDB) </a></li>
-        <li>Avengers - End Games <a href = "https://www.imdb.com/title/tt4154796/?ref_=fn_al_tt_1"> (IMDB) </a></li>
-        <li>The Notebooks <a href = "https://www.imdb.com/title/tt0332280/?ref_=fn_al_tt_3"> (IMDB) </a></li>
-    </ol>
-    <h2>My Moods</h2>
-    <p>
-        <span>Happy:</span>
-        <img src ="image/happy.jfif" alt="me when I'm happy" height="250" width="200" />
-        <span>Sad:</span>
-        <img src ="image/sad.jfif" alt="me when I'm sad" height="250" width="400" />
-    </p>
-    <h2>Fun Facts About My Neighbors</h2>
-    <ul>
-        <li>Sovita Will: She is from Nepal. She is good at MPP </li>
-        <li>Win Smith: Love playing Yo-Gi-Oh</li>
-    </ul>
-    <hr>
-    <footer>
-        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmyhoanguyen.github.io%2Fwap.github.io%2F">
-            <img src="image/HTML-checker.png" alt="html validator" height="100" width="200"/>
-        </a>
-        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmyhoanguyen.github.io%2Fwap.github.io%2F">
-            <img src="image/css_checker.png" alt="css validator" height="90" width="200"/>
-        </a>
-        
-    </footer>
+    <div id="header">
+        <h1>About My Nguyen</h1>
+        <p>I am My Nguyen. What talks about me is
+            <b>diligent</b>, 
+            <b>intronous</b> and quite 
+            <b>clumsy</b></p>
+        <hr/>
+    </div>
+    <div>
+        <h2>My Classes This Quarter</h2>
+        <ul>
+            <li>CS401: Modern Programming Practices (MPP)</li>
+            <li>CS435: Algorithms</li>
+            <li>CS472: Web Programming	</li>
+            <li>CS544: Enterprise Architecture</li>
+        </ul>
+    </div>
+    <div>
+        <h2>My Favorite Movies</h2>
+        <p><i>(I actually don't  watch too may movies, so ...here goes!)</i></p>
+        <ol>
+            <li>
+                Squid Game <a href = "https://www.imdb.com/title/tt10919420/?ref_=fn_al_tt_1"> (IMDB) </a>
+                <dl class ="detail">
+                    <dt>Directors</dt>
+                    <dd>Hwang Dong-hyuk</dd>
+                    <dt>Writers</dt>
+                    <dd>Hwang Dong-hyuk</dd>
+                    <dt> Stars</dt>
+                    <dd> Lee Jung-jaePark, Hae-sooWi, Ha-Joon</dd>
+                </dl>
+            </li>
+            <li>
+                Now, we are breaking <a href = "https://www.imdb.com/title/tt14408016/?ref_=fn_al_tt_1"> (IMDB) </a>
+                <dl class ="detail">
+                    <dt>Directors</dt>
+                    <dd>Lee Dong-hyuk</dd>
+                    <dt>Writers</dt>
+                    <dd>Lee Dong-hyuk</dd>
+                    <dt>Stars</dt>
+                    <dd>Ana KimSong, Hye-KyoJang, Ki-Yong</dd>
+                </dl> 
+            </li>
+            <li>
+                Avengers - End Games <a href = "https://www.imdb.com/title/tt4154796/?ref_=fn_al_tt_1"> (IMDB) </a>
+                <dl class ="detail">
+                    <dt>Directors</dt>
+                    <dd>Anthony Russo, Joe Russo</dd>
+                    <dt>Writers</dt>
+                    <dd>Christopher Markus (screen play by), Stephen McFeely (screenplay by), Stan Lee (based on the Marvel comics by)</dd>
+                    <dt>Stars</dt>
+                    <dd>Stars Robert Downey Jr, Chris Evans. Mark Ruffalo</dd>
+                </dl>
+            </li>
+            <li>
+                The Notebooks <a href = "https://www.imdb.com/title/tt0332280/?ref_=fn_al_tt_3"> (IMDB) </a>
+                <dl class ="detail">
+                    <dt><b></b>Directors<b></b></dt>
+                    <dd>Nick Cassavetes</dd>
+                    <dt>Writers</dt>
+                    <dd>Jeremy Leven(screenplay), Jan Sardi(adaptation), Nicholas Sparks(novel)</dd>
+                    <dt> Stars</dt>
+                    <dd>Gena Rowlands,James Garner, Rachel McAdams</dd>
+                </dl>
+            </li>
+        </ol>
+    </div>
+    <div>
+        <h2>My Moods</h2>
+        <p>
+            <span>Happy:</span>
+            <img src ="image/happy.jfif" alt="me when I'm happy" height="250" width="200" />
+            <span>Sad:</span>
+            <img src ="image/sad.jfif" alt="me when I'm sad" height="250" width="400" />
+        </p>
+        <h2>Fun Facts About My Neighbors</h2>
+        <ul>
+            <li>Sovita Will: She is from Nepal. She is good at MPP </li>
+            <li>Win Smith: Love playing Yo-Gi-Oh</li>
+        </ul>
+        <hr>
+    </div>
+    <div>
+        <footer>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmyhoanguyen.github.io%2Fwap.github.io%2F">
+                <img src="image/HTML-checker.png" alt="html validator" height="80" width="200"/>
+            </a>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmyhoanguyen.github.io%2Fwap.github.io%2F">
+                <img src="image/css_checker.png" alt="css validator" height="80" width="200"/>
+            </a>
+        </footer>
+    </div>
 </body>
 </html>
