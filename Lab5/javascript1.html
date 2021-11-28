@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var input1 = [1, 2, 3, 20, 21, 22];
+
+        function sum(array) {
+            return array.filter(x => x > 20).reduce(function (a, b) {return a + b;}, 0);
+        }
+
+        function buttonSum() {
+            alert(sum(input1));
+        }
+
+        ///////////////////////////////////////////////////////////
+        var input2 = ["rrraccc","a","x","2222a222","a333333"];
+
+        function getNewArray(array) {
+            return array.filter(x=>x.length>=5 && x.indexOf("a")>0);
+        }
+
+
+        function button2() {
+            alert(getNewArray(input2))
+        }
+
+    </script>
+</head>
+<body>
+<p>input for SUM = [1, 2, 3, 20, 21, 22]</p>
+<p>input for get NEW ARRAY= ["rrraccc","a","x","2222a222","a333333"];</p>
+<button onclick="buttonSum()">SUM</button>
+<button onclick="button2()">getNewArray</button>
+</body>
+</html>
