@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WorkShop Registration</title>
+    <meta charset="utf-8" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <form action="/action_page.php">
+        <div class="wrapper">
+            <header class="header">
+                <h2>Workshop Registration</h2>
+            </header>
+            <aside class="aside aside-1">
+                <p class="first">Register now while seats are available!</p>
+                <div class="grid-container1">
+                    <div class="required-field">
+                        <label>First Name</label>
+                    </div>
+                    <div>
+                        <input type="text" name="firstname" required="Y" value=""  size="30"/>
+                    </div>
+                    <div class="required-field">
+                        <label>Last Name</label>
+                    </div>
+                    <div>
+                        <input type="text" name="lastname" required="Y" value="" size="30" />
+                    </div>
+                    <div class="required-field">
+                        <label>Company/Institution</label>
+                    </div>
+                    <div>
+                        <input type="text" name="company" required="Y" value="" size="30"/>
+                    </div>
+                    <div class="required-field">
+                        <label>Address</label>
+                    </div>
+                    <div>
+                        <textarea rows="8" cols="28" name="address">
+                        </textarea>
+                    </div>
+                    <div>
+                        <label>City</label>
+                    </div>
+                    <div>
+                        <input type="text" name="city" size="30"/>
+                    </div>
+                    <div>
+                        <label>State/Province/Region</label>
+                    </div>
+                    <div >
+                        <select name="state" id="state-select" class="select_attributes">
+                            <option value="">--Select--</option>
+                            <option value="TX">TX</option>
+                            <option value="IA">IA</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Country</label>
+                    </div>
+                    <div >
+                        <select name="country" id="country-select" class="select_attributes">
+                            <option value="">--Select--</option>
+                            <option value="US">US</option>
+                            <option value="CN">CN</option>
+                        </select>
+                    </div>
+                    <div class="required-field">
+                        <label>Email</label>
+                    </div>
+                    <div>
+                        <input type="text" name="email" required="Y" size="30" pattern="^[a-zA-Z_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,4}$" />
+                    </div>
+                    <div class="required-field">
+                        <label>Phone Number</label>
+                    </div>
+                    <div>
+                        <input type="text" name="phone" required="Y" size="30"  pattern="^\d{3}-\d{3}-\d{4}$" />
+                    </div>
+                </div>
+            </aside>
+            <aside class="aside aside-2">
+                 <div class="grid-container1">
+                    <div>
+                        <label class="first">Lunch</label>
+                    </div>
+                    <div>
+                        <label class="first"></label>
+                    </div>
+                    <div>
+                        <label>Meal Preference</label>
+                    </div>
+                    <div >
+                        <select name="meal" id="smeal-select" class="select_attributes">
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Vegetarian2">Vegetarian2</option>
+                            <option value="Vegetarian3">Vegetarian3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="first">Payment Details</label>
+                    </div>
+                    <div>
+                        <label class="first"></label>
+                    </div>
+                    <div>
+                        <label>Payment Mode</label>
+                    </div>
+                    <div class ="payment_properties">
+                        <label> <input type="checkbox" name="cc" value="cash"
+                                       checked="checked" /> Cash</label> <br/>
+                        <label> <input type="checkbox" name="cc" value="cheque" />
+                            Cheque</label>  <br/>
+                        <label> <input type="checkbox" name="cc" value="demand" /> American
+                            Demand Draft</label>  <br/>
+                    </div>
+                    <div>
+                        <label>DD/Check No.</label>
+                    </div>
+                    <div>
+                        <input type="text" name="checkNo" size="30" />
+                    </div>
+                    <div>
+                        <label>Drawn or (Bank Name)</label>
+                    </div>
+                    <div>
+                        <input type="text" name="draw" size="30" />
+                    </div>
+                    <div>
+                        <label>Payable at</label>
+                    </div>
+                    <div>
+                        <input type="text" name="payable" size="30" />
+                    </div>
+                    
+                </div>
+            </aside>
+            <footer class="footer">
+                <input class="button_input" type="submit"  value="Submit"/>
+                <input class="button_input" type="reset"  value="Reset"/>
+            </footer>
+        </div>
+    </form>    
+</body>
+</html>
