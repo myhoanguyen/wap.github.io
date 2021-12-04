@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script>
+        // function happy(){
+        //
+        //     alert("happy day");
+        //
+        //     return 2;
+        //
+        // }
+        //
+        // let x = happy;
+        //
+        // console.log(x);
+        // const students = [
+        //     { name: 'Quincy', grade: 96, courses:['cs301', 'cs303']},
+        //     { name: 'Jason', grade: 84, courses:['cs201', 'cs203']},
+        //     { name: 'Alexis', grade: 100, courses:['cs105', 'cs211'] },
+        //     { name: 'Sam', grade: 65, courses:['cs445', 'cs303'] },
+        //     { name: 'Katie', grade: 90, courses:['cs303', 'cs477'] }
+        // ];
+        //
+        // function comoputeAvg() {
+        //     // let cs303students = students.filter(s => s.courses.includes('cs303'))
+        //     // return cs303students.reduce((sum, s) => sum + s.grade, 0)/cs303students.length
+        //     let cs303students = students.filter(student => student.courses.includes('cs303'))
+        //     return cs303students.reduce((sum, student ) => sum + student.grade, 0)/cs303students.length
+        // }
+        // let x= comoputeAvg();
+        // console.log(x);
+
+        const students = [
+            {name: 'Quincy', grade: 96, courses: ['cs301', 'cs303']},
+            {name: 'Jason', grade: 84, courses: ['cs201', 'cs203']},
+            {name: 'Alexis', grade: 100, courses: ['cs105', 'cs211']},
+            {name: 'Sam', grade: 65, courses: ['cs445', 'cs303']},
+            {name: 'Katie', grade: 90, courses: ['cs303', 'cs477']}
+        ];
+        // var cs303 = students.filter(s => s.courses.find(e => e == 'cs303') != null)
+        // var totalGrade = cs303.reduce((p,c) => c.grade + p , 0);
+        // console.log(totalGrade/cs303.length)
+        function comoputeAvg() {
+            // let cs303students = students.filter(s => s.courses.includes('cs303'))
+            // return cs303students.reduce((sum, s) => sum + s.grade, 0)/cs303students.length
+            let cs303_students = students.filter(student => student.courses.find(e => e == 'cs303') != null)
+            return cs303_students.reduce((sum, student ) => sum + student.grade, 0)/cs303_students.length
+        }
+    
+        let x= comoputeAvg();
+        console.log(x);
+
+    </script>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+// when clling loginOk or loginFail , it is not user, it is window
+
+

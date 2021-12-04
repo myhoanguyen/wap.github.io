@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 8 - Question 1</title>
+    <script>
+        let student = {
+            firstName: '',
+            lastName: '',
+            grades: [],
+            //inputNewGrade: newGrade => {this.grades.push(newGrade)},
+            inputNewGrade: function(newGrade) {this.grades.push(newGrade)},
+            computeAverageGrade: function() {
+                //return this.grades.reduce((s, n) => s + n)/this.grades.length;
+                return this.grades.reduce((sum, current, index, array) => sum+current/array.length,0);
+            }
+        };   
+       
+        let firstNames = ['Mia','Ann' , 'Kay'];
+        let lastNames = ['Jun','Lee' ,'Miller' ];
+        // Students array and add data
+        let allStudents = [];
+        let i =0;
+        for (let x in firstNames) {
+            allStudents[i] = Object.create(student);
+            allStudents[i].firstName = firstNames[i];
+            allStudents[i].lastName= lastNames[i];
+            allStudents[i].grades=[];
+            i++;
+        }
+        allStudents[0].inputNewGrade(88);
+        allStudents[0].inputNewGrade(98);
+        allStudents[0].inputNewGrade(86);
+        allStudents[0].inputNewGrade(80);
+        
+        allStudents[1].inputNewGrade(85);
+        allStudents[1].inputNewGrade(95);
+        allStudents[1].inputNewGrade(85);
+        allStudents[1].inputNewGrade(70);
+
+        allStudents[2].inputNewGrade(85);
+        allStudents[2].inputNewGrade(95);
+        allStudents[2].inputNewGrade(85);
+        allStudents[2].inputNewGrade(90);
+
+        console.log(allStudents);
+        const  result = allStudents.reduce((average, stu,index, array) => average +stu.computeAverageGrade()/array.length,0);
+        console.log(result);
+        // allStudents.forEach(student => {
+        //     console.log(student.computeAverageGrade())
+        // })
+    </script>
+</head>
+<body>
+
+<h1>LAB 8</h1>
+<p>QUESTION 1.</p>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 8 - question 2</title>
+    <script>
+        function Student(fname, lname,grades=[]) {
+            this.firstName = fname;
+            this.lastName = lname;
+            this.grades = grades;
+        }
+        Student.prototype.inputNewGrade = function(newGrage) {
+            this.grades.push(newGrage);
+        };
+        Student.prototype.computeAverageGrage = function() {
+            return this.grades.reduce((sum,current, index, array) => sum+current/array.length,0);
+        };
+        const stu1 = new Student('Mia', 'Jun');
+        stu1.inputNewGrade(88);
+        stu1.inputNewGrade(98);
+        stu1.inputNewGrade(86);
+        stu1.inputNewGrade(80);
+        const stu2 = new Student('Ann', 'Lee');
+        stu2.inputNewGrade(85);
+        stu2.inputNewGrade(95);
+        stu2.inputNewGrade(85);
+        stu2.inputNewGrade(70);
+        const stu3 = new Student('Kay', 'Miller');
+        stu3.inputNewGrade(85);
+        stu3.inputNewGrade(95);
+        stu3.inputNewGrade(85);
+        stu3.inputNewGrade(90);
+        const students = [stu1, stu2,stu3];
+        console.log(students);
+        const result = students.reduce((avg, stu, idx, array)=>avg+stu.computeAverageGrage()/array.length,0);
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+<h1>LAB 8</h1>
+<p>QUESTION 2</p>
+
+</body>
+</html>
+
+
