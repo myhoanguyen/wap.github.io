@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 8 - QUestion 3</title>
+    <script>
+        function Student(fname, lname,grades=[]) {
+            this.firstName = fname;
+            this.lastName = lname;
+            this.grades = grades;
+        }
+        Student.prototype.inputNewGrade = function(newGrage) {
+            this.grades.push(newGrage);
+        };
+        Student.prototype.computeAverageGrage = function() {
+            return this.grades.reduce((sum,current, index, array) => sum+current/array.length,0);
+        };
+        const stu1 = new Student('Mia', 'Jun');
+        stu1.inputNewGrade(88);
+        stu1.inputNewGrade(98);
+        stu1.inputNewGrade(86);
+        stu1.inputNewGrade(80);
+        const stu2 = new Student('Ann', 'Lee');
+        stu2.inputNewGrade(85);
+        stu2.inputNewGrade(95);
+        stu2.inputNewGrade(85);
+        stu2.inputNewGrade(70);
+        const stu3 = new Student('Kay', 'Miller');
+        stu3.inputNewGrade(85);
+        stu3.inputNewGrade(95);
+        stu3.inputNewGrade(85);
+        stu3.inputNewGrade(90);
+        const students = [stu1, stu2,stu3];
+        console.log(students);
+      
+        Array.prototype.sort1 = function(){
+            let arr = this;
+            let len = arr.length;
+            for (let i = len - 1; i >= 0; i--) {
+                for (let j = 1; j <= i; j++) {
+                    if (arr[j - 1] > arr[j]) {
+                        let temp = arr[j - 1];
+                        arr[j - 1] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        // function propComparator(prop) {
+        //     return function(a, b) {
+        //         return a[prop] - b[prop];
+        //     }
+        // }
+
+        const propComparator = (propName) =>
+            (a, b) => a[propName] == b[propName] ? 0 : a[propName] < b[propName] ? -1 : 1
+
+
+        // students.sort(propComparator('firstName'));
+        // console.log("By firstName", students);
+        students.sort(propComparator('firstName'));
+        console.log("By firstName", students);
+        
+    </script>
+</head>
+<body>
+
+<h1>LAB 8</h1>
+<p>Question 3</p>
+
+</body>
+</html>
+
+
