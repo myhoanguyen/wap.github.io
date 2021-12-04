@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab7 - Question 2</title>
+    <script>
+        let group ={
+            title: "Our group",
+            students:["John", "Pete","Alice"],
+            showList: function(){
+                this.students.forEach(function (student){
+                    console.log(this.title + ": " + student)
+                }.bind(this))
+            } 
+        }
+        group.showList();
+        // if not bind
+        // undefined: John
+        // undefined: Pete
+        // undefined: Alice
+    </script>
+</head>
+<body>
+
+<h1>LAB 7</h1>
+<p>Question 2</p>
+
+</body>
+</html>
+
+
