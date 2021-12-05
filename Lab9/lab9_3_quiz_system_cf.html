@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 - QUestion 3</title>
+    <script>
+        //----------Student------------
+        function Student(studentId){
+            this.studentId = studentId;
+            this.answers=[] ;   
+        }
+        Student.prototype.addAnswer = function(question){
+            this.answers.push(question);
+        }
+
+        //----------Question------------
+       function Question(qid,answer){
+            this.qid = qid;
+            this.answer = answer;    
+       }
+       Question.prototype.checkAnswer = function(answer){
+            return this.answer===answer;
+       }
+
+        //----------Quiz------------
+       function Quiz(questions, students){
+            this.questions = new Map();
+           questions.forEach(q => this.questions.set(q.qid, q.answer));
+           this.students = students;
+       }
+
+        Quiz.prototype.scoreStudent =function(studentId) {
+            const student = this.students.filter(s =>s.studentId===studentId)[0];
+            return student.answers.reduce((sum, currentQuestion) =>{
+                if (currentQuestion.checkAnswer(this.questions.get(currentQuestion.qid))){
+                    sum = sum +1;
+                }
+                return sum;
+            },0)
+        }
+        Quiz.prototype.getAverageScore = function() {
+            return this.students.reduce((accumulator, student, index,array) =>{
+                return accumulator + this.scoreStudent(student.studentId)/array.length
+            },0);
+        }
+        
+        //--------call constructor functions-------------
+        // Question data
+        const questions  =[new Question(1, 'b'), new Question(2, 'a'), new
+        Question(3, 'b')];
+        
+        // Student data
+        const student1 = new Student(10);
+        student1.addAnswer(new Question(1,'b'));
+        student1.addAnswer(new Question(2,'a'));
+        student1.addAnswer(new Question(3,'b'));
+        
+        const student2 = new Student(11);
+        student2.addAnswer(new Question(3,'b'));
+        student2.addAnswer(new Question(2,'a'));
+        student2.addAnswer(new Question(1,'d'));
+
+        const students = [student1, student2];
+        
+        // Quiz data
+        const quiz = new Quiz(questions, students);
+        
+        let scoreForStudent10 = quiz.scoreStudent(10);
+        console.log(scoreForStudent10); //Expected Result: 3
+        
+        let scoreForStudent11 = quiz.scoreStudent(11);
+        console.log(scoreForStudent11); //Expected Result: 2
+        
+        let average = quiz.getAverageScore();
+        console.log(average); //Expected Result: 2.5
+        
+        
+        
+    </script>
+</head>
+<body>
+
+<h1>LAB 9</h1>
+<p>Question 3 - constructor function</p>
+
+</body>
+</html>
+
+
