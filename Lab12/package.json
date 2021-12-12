@@ -1,0 +1,14 @@
+{
+  "name": "lab12",
+  "version": "1.0.0",
+  "description": "Lab 12 - Solution",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "My Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
