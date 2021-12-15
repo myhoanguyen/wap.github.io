@@ -1,22 +1,23 @@
 let books = [];
-books = [{id: 1, title: "Node.js",ISBN:"123", author: {authorId: "303", firstname: "Edward", lastname: "James"}},
-    {id: 2,title: "Angular",ISBN:"456",author: {authorId: 308,firstname: "John",lastname: "Smith" }},
-    {id: 3,title: "React",ISBN:"783",author: {authorId: 311,firstname: "Lucy",lastname: "Jack" }},
-    {id: 4,title: "JavaScript",ISBN:"568",author: {authorId: 511,firstname: "Emma",lastname: "Smith" }}
+books = [{id: 1, title: "Node.js",isbn:"123",publishedDate:"12/12/2012", author:"Kim Lee" },
+    {id: 2,title: "Angular",isbn:"456",publishedDate:"12/12/2012", author:"Kim Lee"},
+    {id: 3,title: "React",isbn:"783",publishedDate:"12/12/2012", author:"Kim Lee"},
+    {id: 4,title: "JavaScript",isbn:"568",publishedDate:"12/12/2012", author:"Kim Lee"}
 ];
 
 module.exports = class Book {
 
-    constructor(id, title, ISBN, author) {
+    constructor(id, title, isbn,publishedDate, author) {
         this.id = id;
         this.title = title;
-        this.ISBN = ISBN;
-        this.author = author;
+        this.isbn = isbn;
+        this.publishedDate=publishedDate, 
+            this.author = author;
     }
     //create
     save() {
         //this.id = Math.random().toString();
-        if (book.length >0){
+        if (books.length >0){
             this.id = books[length -1].id +1;
         }
         else this.id = 1;
@@ -29,7 +30,7 @@ module.exports = class Book {
     }
     // Read by bookId
     static findById(bookId) {
-        const index = books.findIndex(p => p.id === bookId);
+        const index = books.findIndex(p => p.id == bookId);
         if (index > -1) {
             return books[index];
         } else {
@@ -39,7 +40,7 @@ module.exports = class Book {
     
     // Update
     update() {
-        const index = books.findIndex(p => p.id === this.id);
+        const index = books.findIndex(p => p.id == this.id);
         if (index > -1) {
             books.splice(index, 1, this);
             return this;
@@ -51,9 +52,9 @@ module.exports = class Book {
 
     //Delete
     static deleteById(bookId) {
-        const index = books.findIndex(p => p.id === bookId);
+        const index = books.findIndex(p => p.id == bookId);
         if (index > -1) {
-            books = books.filter(p => p.id !== bookId);
+            books = books.filter(p => p.id != bookId);
         } else {
             throw new Error('NOT Found');
         }
